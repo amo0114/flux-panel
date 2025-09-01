@@ -6,9 +6,9 @@ import legacy from '@vitejs/plugin-legacy'
 export default defineConfig({
   plugins: [
     react(),
-    // legacy({
-    //   targets: ['defaults', 'not IE 11']
-    // })
+    legacy({
+      targets: ['defaults', 'not IE 11']
+    })
   ],
   base: './',    
   resolve: {
@@ -21,7 +21,6 @@ export default defineConfig({
     host: '0.0.0.0'
   },
   build: {
-    target: 'esnext', 
     outDir: 'dist',
     sourcemap: false,
     minify: false,  
