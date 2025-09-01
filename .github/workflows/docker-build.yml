@@ -131,7 +131,7 @@ jobs:
         if: steps.vite-changes.outputs.vite == 'true'
         run: |
           docker buildx build \
-            --platform linux/amd64,linux/arm64 \
+            --platform linux/amd64 \
             --push \
             -t moyuan0115/vite-frontend \
             ./vite-frontend
@@ -186,7 +186,7 @@ jobs:
         if: steps.java-changes.outputs.java == 'true'
         run: |
           docker buildx build \
-            --platform linux/amd64,linux/arm64 \
+            --platform linux/amd64 \
             --push \
             -t moyuan0115/springboot-backend \
             ./springboot-backend
