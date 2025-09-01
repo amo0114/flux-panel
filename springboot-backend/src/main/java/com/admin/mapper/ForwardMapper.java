@@ -12,8 +12,8 @@ import java.util.List;
  *  Mapper 接口
  * </p>
  *
- * @author QAQ
- * @since 2025-06-03
+ * @author QAQ 
+ * @since 2025-08-03
  */
 public interface ForwardMapper extends BaseMapper<Forward> {
 
@@ -31,3 +31,4 @@ public interface ForwardMapper extends BaseMapper<Forward> {
     List<ForwardWithTunnelDto> selectForwardsWithTunnelByUserId(@Param("userId") Integer userId);
 
 }
+
